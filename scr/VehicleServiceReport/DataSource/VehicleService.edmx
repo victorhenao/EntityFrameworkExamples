@@ -1,0 +1,676 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="VehicleServiceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'VehicleService.dbo.VehicleServiceComplete' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="VehicleServiceComplete">
+          <Key>
+            <PropertyRef Name="ServiceOrderId" />
+            <PropertyRef Name="RequestedDate" />
+            <PropertyRef Name="VehicleFk" />
+            <PropertyRef Name="ServiceOrderStatusFk" />
+            <PropertyRef Name="AutomotiveTechnicianLeadFk" />
+            <PropertyRef Name="InvoiceId" />
+            <PropertyRef Name="InvoiceNumber" />
+            <PropertyRef Name="Taxes" />
+            <PropertyRef Name="Value" />
+            <PropertyRef Name="InvoicingDate" />
+            <PropertyRef Name="AutomotiveTechnicianLeadId" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="ServiceOrderHistoryId" />
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="FinalStatusFk" />
+            <PropertyRef Name="ServiceOrderFk" />
+            <PropertyRef Name="VehicleId" />
+            <PropertyRef Name="PlateNumber" />
+            <PropertyRef Name="VehicleModelFk" />
+            <PropertyRef Name="CustomerFk" />
+            <PropertyRef Name="VehicleModelId" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="VehicleBrandFk" />
+            <PropertyRef Name="VehicleBrandId" />
+            <PropertyRef Name="Brand" />
+            <PropertyRef Name="CustomerId" />
+            <PropertyRef Name="CustomerName" />
+            <PropertyRef Name="Address" />
+            <PropertyRef Name="PhoneNumer" />
+            <PropertyRef Name="ServiceOrderCategoryId" />
+            <PropertyRef Name="Comments" />
+            <PropertyRef Name="CategoryFk" />
+            <PropertyRef Name="ServiceOrderCategoryServieOrderFk" />
+            <PropertyRef Name="ServiceOrderCategoryStatusFk" />
+            <PropertyRef Name="CategoryId" />
+            <PropertyRef Name="Category" />
+            <PropertyRef Name="AutomotiveTechnicianId" />
+            <PropertyRef Name="TechnicianName" />
+            <PropertyRef Name="ServiceOrderCategoryHistoryId" />
+            <PropertyRef Name="ServiceOrderCategoryHistoryDate" />
+            <PropertyRef Name="ServiceOrderCategoryHistoryFinalStatusFk" />
+            <PropertyRef Name="ServiceOrderCategoryFk" />
+            <PropertyRef Name="OrderCategoryDetailId" />
+            <PropertyRef Name="OrderCategoryDetailComments" />
+            <PropertyRef Name="Findings" />
+            <PropertyRef Name="OrderCategoryDetailStartDate" />
+            <PropertyRef Name="OrderCategoryDetailEndDate" />
+            <PropertyRef Name="OrderCategoryDetailStatusFk" />
+            <PropertyRef Name="OrderCategoryDetailServiceOrderCategoryFk" />
+            <PropertyRef Name="OrderCategoryDetailHitoryId" />
+            <PropertyRef Name="OrderCategoryDetailHistoryDate" />
+            <PropertyRef Name="OrderCategoryDetailHistoryFinalStatusFk" />
+            <PropertyRef Name="OrderCategoryDetailFk" />
+            <PropertyRef Name="PartManteinanceId" />
+            <PropertyRef Name="SerialNumber" />
+            <PropertyRef Name="PartManteinanceComments" />
+            <PropertyRef Name="PartManteinanceOrderCatgoryDetailFk" />
+            <PropertyRef Name="ParfFk" />
+            <PropertyRef Name="PartReplacementId" />
+            <PropertyRef Name="PartReplacementSerialNumber" />
+            <PropertyRef Name="PartReplacementComments" />
+            <PropertyRef Name="PartReplacementOrderCategoryDetalFk" />
+            <PropertyRef Name="PartFk" />
+            <PropertyRef Name="PartmanteinancePartId" />
+            <PropertyRef Name="PartmanteinancePartName" />
+            <PropertyRef Name="PartReplacementPartId" />
+            <PropertyRef Name="PartReplacementPartName" />
+            <PropertyRef Name="ManufacturerNameManteinance" />
+            <PropertyRef Name="ManufacturerNameReplacement" />
+          </Key>
+          <Property Name="ServiceOrderId" Type="int" Nullable="false" />
+          <Property Name="RequestedDate" Type="datetime" Nullable="false" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="VehicleFk" Type="int" Nullable="false" />
+          <Property Name="ServiceOrderStatusFk" Type="int" Nullable="false" />
+          <Property Name="InvoiceFk" Type="int" />
+          <Property Name="AutomotiveTechnicianLeadFk" Type="int" Nullable="false" />
+          <Property Name="InvoiceId" Type="int" Nullable="false" />
+          <Property Name="InvoiceNumber" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Taxes" Type="int" Nullable="false" />
+          <Property Name="Value" Type="int" Nullable="false" />
+          <Property Name="InvoicingDate" Type="datetime" Nullable="false" />
+          <Property Name="AutomotiveTechnicianLeadId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="ServiceOrderHistoryId" Type="int" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="InitialStatusFK" Type="int" />
+          <Property Name="FinalStatusFk" Type="int" Nullable="false" />
+          <Property Name="ServiceOrderFk" Type="int" Nullable="false" />
+          <Property Name="VehicleId" Type="int" Nullable="false" />
+          <Property Name="PlateNumber" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastServiceDate" Type="datetime" />
+          <Property Name="VehicleModelFk" Type="int" Nullable="false" />
+          <Property Name="CustomerFk" Type="int" Nullable="false" />
+          <Property Name="VehicleModelId" Type="int" Nullable="false" />
+          <Property Name="Model" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="VehicleBrandFk" Type="int" Nullable="false" />
+          <Property Name="VehicleBrandId" Type="int" Nullable="false" />
+          <Property Name="Brand" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CustomerId" Type="int" Nullable="false" />
+          <Property Name="CustomerName" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="Address" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="PhoneNumer" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ServiceOrderCategoryId" Type="int" Nullable="false" />
+          <Property Name="Comments" Type="varchar" MaxLength="800" Nullable="false" />
+          <Property Name="CategoryFk" Type="int" Nullable="false" />
+          <Property Name="ServiceOrderCategoryServieOrderFk" Type="int" Nullable="false" />
+          <Property Name="ServiceOrderCategoryStatusFk" Type="int" Nullable="false" />
+          <Property Name="AutomotiveTechnicianFk" Type="int" />
+          <Property Name="CategoryId" Type="int" Nullable="false" />
+          <Property Name="Category" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="AutomotiveTechnicianId" Type="int" Nullable="false" />
+          <Property Name="TechnicianName" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="ServiceOrderCategoryHistoryId" Type="int" Nullable="false" />
+          <Property Name="ServiceOrderCategoryHistoryDate" Type="datetime" Nullable="false" />
+          <Property Name="ServiceOrderCategoryHistoryInitialStatusFk" Type="int" />
+          <Property Name="ServiceOrderCategoryHistoryFinalStatusFk" Type="int" Nullable="false" />
+          <Property Name="ServiceOrderCategoryFk" Type="int" Nullable="false" />
+          <Property Name="OrderCategoryDetailId" Type="int" Nullable="false" />
+          <Property Name="OrderCategoryDetailComments" Type="varchar" MaxLength="800" Nullable="false" />
+          <Property Name="Findings" Type="varchar" MaxLength="800" Nullable="false" />
+          <Property Name="OrderCategoryDetailStartDate" Type="datetime" Nullable="false" />
+          <Property Name="OrderCategoryDetailEndDate" Type="datetime" Nullable="false" />
+          <Property Name="OrderCategoryDetailStatusFk" Type="int" Nullable="false" />
+          <Property Name="OrderCategoryDetailServiceOrderCategoryFk" Type="int" Nullable="false" />
+          <Property Name="OrderCategoryDetailHitoryId" Type="int" Nullable="false" />
+          <Property Name="OrderCategoryDetailHistoryDate" Type="datetime" Nullable="false" />
+          <Property Name="OrderCategoryDetailHistoryInitialStatusFk" Type="int" />
+          <Property Name="OrderCategoryDetailHistoryFinalStatusFk" Type="int" Nullable="false" />
+          <Property Name="OrderCategoryDetailFk" Type="int" Nullable="false" />
+          <Property Name="PartManteinanceId" Type="int" Nullable="false" />
+          <Property Name="SerialNumber" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PartManteinanceComments" Type="varchar" MaxLength="800" Nullable="false" />
+          <Property Name="PartManteinanceOrderCatgoryDetailFk" Type="int" Nullable="false" />
+          <Property Name="ParfFk" Type="int" Nullable="false" />
+          <Property Name="PartReplacementId" Type="int" Nullable="false" />
+          <Property Name="PartReplacementSerialNumber" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PartReplacementComments" Type="varchar" MaxLength="800" Nullable="false" />
+          <Property Name="PartReplacementOrderCategoryDetalFk" Type="int" Nullable="false" />
+          <Property Name="PartFk" Type="int" Nullable="false" />
+          <Property Name="PartmanteinancePartId" Type="int" Nullable="false" />
+          <Property Name="PartmanteinancePartName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="PartReplacementPartId" Type="int" Nullable="false" />
+          <Property Name="PartReplacementPartName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ManufacturerNameManteinance" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="ManufacturerNameReplacement" Type="varchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <Function Name="uspVehicleServiceComplete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="VehicleServiceModelStoreContainer">
+          <EntitySet Name="VehicleServiceComplete" EntityType="Self.VehicleServiceComplete" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VehicleServiceComplete].[ServiceOrderId] AS [ServiceOrderId], 
+    [VehicleServiceComplete].[RequestedDate] AS [RequestedDate], 
+    [VehicleServiceComplete].[StartDate] AS [StartDate], 
+    [VehicleServiceComplete].[EndDate] AS [EndDate], 
+    [VehicleServiceComplete].[VehicleFk] AS [VehicleFk], 
+    [VehicleServiceComplete].[ServiceOrderStatusFk] AS [ServiceOrderStatusFk], 
+    [VehicleServiceComplete].[InvoiceFk] AS [InvoiceFk], 
+    [VehicleServiceComplete].[AutomotiveTechnicianLeadFk] AS [AutomotiveTechnicianLeadFk], 
+    [VehicleServiceComplete].[InvoiceId] AS [InvoiceId], 
+    [VehicleServiceComplete].[InvoiceNumber] AS [InvoiceNumber], 
+    [VehicleServiceComplete].[Taxes] AS [Taxes], 
+    [VehicleServiceComplete].[Value] AS [Value], 
+    [VehicleServiceComplete].[InvoicingDate] AS [InvoicingDate], 
+    [VehicleServiceComplete].[AutomotiveTechnicianLeadId] AS [AutomotiveTechnicianLeadId], 
+    [VehicleServiceComplete].[Name] AS [Name], 
+    [VehicleServiceComplete].[ServiceOrderHistoryId] AS [ServiceOrderHistoryId], 
+    [VehicleServiceComplete].[Date] AS [Date], 
+    [VehicleServiceComplete].[InitialStatusFK] AS [InitialStatusFK], 
+    [VehicleServiceComplete].[FinalStatusFk] AS [FinalStatusFk], 
+    [VehicleServiceComplete].[ServiceOrderFk] AS [ServiceOrderFk], 
+    [VehicleServiceComplete].[VehicleId] AS [VehicleId], 
+    [VehicleServiceComplete].[PlateNumber] AS [PlateNumber], 
+    [VehicleServiceComplete].[LastServiceDate] AS [LastServiceDate], 
+    [VehicleServiceComplete].[VehicleModelFk] AS [VehicleModelFk], 
+    [VehicleServiceComplete].[CustomerFk] AS [CustomerFk], 
+    [VehicleServiceComplete].[VehicleModelId] AS [VehicleModelId], 
+    [VehicleServiceComplete].[Model] AS [Model], 
+    [VehicleServiceComplete].[VehicleBrandFk] AS [VehicleBrandFk], 
+    [VehicleServiceComplete].[VehicleBrandId] AS [VehicleBrandId], 
+    [VehicleServiceComplete].[Brand] AS [Brand], 
+    [VehicleServiceComplete].[CustomerId] AS [CustomerId], 
+    [VehicleServiceComplete].[CustomerName] AS [CustomerName], 
+    [VehicleServiceComplete].[Address] AS [Address], 
+    [VehicleServiceComplete].[PhoneNumer] AS [PhoneNumer], 
+    [VehicleServiceComplete].[ServiceOrderCategoryId] AS [ServiceOrderCategoryId], 
+    [VehicleServiceComplete].[Comments] AS [Comments], 
+    [VehicleServiceComplete].[CategoryFk] AS [CategoryFk], 
+    [VehicleServiceComplete].[ServiceOrderCategoryServieOrderFk] AS [ServiceOrderCategoryServieOrderFk], 
+    [VehicleServiceComplete].[ServiceOrderCategoryStatusFk] AS [ServiceOrderCategoryStatusFk], 
+    [VehicleServiceComplete].[AutomotiveTechnicianFk] AS [AutomotiveTechnicianFk], 
+    [VehicleServiceComplete].[CategoryId] AS [CategoryId], 
+    [VehicleServiceComplete].[Category] AS [Category], 
+    [VehicleServiceComplete].[AutomotiveTechnicianId] AS [AutomotiveTechnicianId], 
+    [VehicleServiceComplete].[TechnicianName] AS [TechnicianName], 
+    [VehicleServiceComplete].[ServiceOrderCategoryHistoryId] AS [ServiceOrderCategoryHistoryId], 
+    [VehicleServiceComplete].[ServiceOrderCategoryHistoryDate] AS [ServiceOrderCategoryHistoryDate], 
+    [VehicleServiceComplete].[ServiceOrderCategoryHistoryInitialStatusFk] AS [ServiceOrderCategoryHistoryInitialStatusFk], 
+    [VehicleServiceComplete].[ServiceOrderCategoryHistoryFinalStatusFk] AS [ServiceOrderCategoryHistoryFinalStatusFk], 
+    [VehicleServiceComplete].[ServiceOrderCategoryFk] AS [ServiceOrderCategoryFk], 
+    [VehicleServiceComplete].[OrderCategoryDetailId] AS [OrderCategoryDetailId], 
+    [VehicleServiceComplete].[OrderCategoryDetailComments] AS [OrderCategoryDetailComments], 
+    [VehicleServiceComplete].[Findings] AS [Findings], 
+    [VehicleServiceComplete].[OrderCategoryDetailStartDate] AS [OrderCategoryDetailStartDate], 
+    [VehicleServiceComplete].[OrderCategoryDetailEndDate] AS [OrderCategoryDetailEndDate], 
+    [VehicleServiceComplete].[OrderCategoryDetailStatusFk] AS [OrderCategoryDetailStatusFk], 
+    [VehicleServiceComplete].[OrderCategoryDetailServiceOrderCategoryFk] AS [OrderCategoryDetailServiceOrderCategoryFk], 
+    [VehicleServiceComplete].[OrderCategoryDetailHitoryId] AS [OrderCategoryDetailHitoryId], 
+    [VehicleServiceComplete].[OrderCategoryDetailHistoryDate] AS [OrderCategoryDetailHistoryDate], 
+    [VehicleServiceComplete].[OrderCategoryDetailHistoryInitialStatusFk] AS [OrderCategoryDetailHistoryInitialStatusFk], 
+    [VehicleServiceComplete].[OrderCategoryDetailHistoryFinalStatusFk] AS [OrderCategoryDetailHistoryFinalStatusFk], 
+    [VehicleServiceComplete].[OrderCategoryDetailFk] AS [OrderCategoryDetailFk], 
+    [VehicleServiceComplete].[PartManteinanceId] AS [PartManteinanceId], 
+    [VehicleServiceComplete].[SerialNumber] AS [SerialNumber], 
+    [VehicleServiceComplete].[PartManteinanceComments] AS [PartManteinanceComments], 
+    [VehicleServiceComplete].[PartManteinanceOrderCatgoryDetailFk] AS [PartManteinanceOrderCatgoryDetailFk], 
+    [VehicleServiceComplete].[ParfFk] AS [ParfFk], 
+    [VehicleServiceComplete].[PartReplacementId] AS [PartReplacementId], 
+    [VehicleServiceComplete].[PartReplacementSerialNumber] AS [PartReplacementSerialNumber], 
+    [VehicleServiceComplete].[PartReplacementComments] AS [PartReplacementComments], 
+    [VehicleServiceComplete].[PartReplacementOrderCategoryDetalFk] AS [PartReplacementOrderCategoryDetalFk], 
+    [VehicleServiceComplete].[PartFk] AS [PartFk], 
+    [VehicleServiceComplete].[PartmanteinancePartId] AS [PartmanteinancePartId], 
+    [VehicleServiceComplete].[PartmanteinancePartName] AS [PartmanteinancePartName], 
+    [VehicleServiceComplete].[PartReplacementPartId] AS [PartReplacementPartId], 
+    [VehicleServiceComplete].[PartReplacementPartName] AS [PartReplacementPartName], 
+    [VehicleServiceComplete].[ManufacturerNameManteinance] AS [ManufacturerNameManteinance], 
+    [VehicleServiceComplete].[ManufacturerNameReplacement] AS [ManufacturerNameReplacement]
+    FROM [dbo].[VehicleServiceComplete] AS [VehicleServiceComplete]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="VehicleServiceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="VehicleServiceComplete">
+          <Key>
+            <PropertyRef Name="ServiceOrderId" />
+            <PropertyRef Name="RequestedDate" />
+            <PropertyRef Name="VehicleFk" />
+            <PropertyRef Name="ServiceOrderStatusFk" />
+            <PropertyRef Name="AutomotiveTechnicianLeadFk" />
+            <PropertyRef Name="InvoiceId" />
+            <PropertyRef Name="InvoiceNumber" />
+            <PropertyRef Name="Taxes" />
+            <PropertyRef Name="Value" />
+            <PropertyRef Name="InvoicingDate" />
+            <PropertyRef Name="AutomotiveTechnicianLeadId" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="ServiceOrderHistoryId" />
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="FinalStatusFk" />
+            <PropertyRef Name="ServiceOrderFk" />
+            <PropertyRef Name="VehicleId" />
+            <PropertyRef Name="PlateNumber" />
+            <PropertyRef Name="VehicleModelFk" />
+            <PropertyRef Name="CustomerFk" />
+            <PropertyRef Name="VehicleModelId" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="VehicleBrandFk" />
+            <PropertyRef Name="VehicleBrandId" />
+            <PropertyRef Name="Brand" />
+            <PropertyRef Name="CustomerId" />
+            <PropertyRef Name="CustomerName" />
+            <PropertyRef Name="Address" />
+            <PropertyRef Name="PhoneNumer" />
+            <PropertyRef Name="ServiceOrderCategoryId" />
+            <PropertyRef Name="Comments" />
+            <PropertyRef Name="CategoryFk" />
+            <PropertyRef Name="ServiceOrderCategoryServieOrderFk" />
+            <PropertyRef Name="ServiceOrderCategoryStatusFk" />
+            <PropertyRef Name="CategoryId" />
+            <PropertyRef Name="Category" />
+            <PropertyRef Name="AutomotiveTechnicianId" />
+            <PropertyRef Name="TechnicianName" />
+            <PropertyRef Name="ServiceOrderCategoryHistoryId" />
+            <PropertyRef Name="ServiceOrderCategoryHistoryDate" />
+            <PropertyRef Name="ServiceOrderCategoryHistoryFinalStatusFk" />
+            <PropertyRef Name="ServiceOrderCategoryFk" />
+            <PropertyRef Name="OrderCategoryDetailId" />
+            <PropertyRef Name="OrderCategoryDetailComments" />
+            <PropertyRef Name="Findings" />
+            <PropertyRef Name="OrderCategoryDetailStartDate" />
+            <PropertyRef Name="OrderCategoryDetailEndDate" />
+            <PropertyRef Name="OrderCategoryDetailStatusFk" />
+            <PropertyRef Name="OrderCategoryDetailServiceOrderCategoryFk" />
+            <PropertyRef Name="OrderCategoryDetailHitoryId" />
+            <PropertyRef Name="OrderCategoryDetailHistoryDate" />
+            <PropertyRef Name="OrderCategoryDetailHistoryFinalStatusFk" />
+            <PropertyRef Name="OrderCategoryDetailFk" />
+            <PropertyRef Name="PartManteinanceId" />
+            <PropertyRef Name="SerialNumber" />
+            <PropertyRef Name="PartManteinanceComments" />
+            <PropertyRef Name="PartManteinanceOrderCatgoryDetailFk" />
+            <PropertyRef Name="ParfFk" />
+            <PropertyRef Name="PartReplacementId" />
+            <PropertyRef Name="PartReplacementSerialNumber" />
+            <PropertyRef Name="PartReplacementComments" />
+            <PropertyRef Name="PartReplacementOrderCategoryDetalFk" />
+            <PropertyRef Name="PartFk" />
+            <PropertyRef Name="PartmanteinancePartId" />
+            <PropertyRef Name="PartmanteinancePartName" />
+            <PropertyRef Name="PartReplacementPartId" />
+            <PropertyRef Name="PartReplacementPartName" />
+            <PropertyRef Name="ManufacturerNameManteinance" />
+            <PropertyRef Name="ManufacturerNameReplacement" />
+          </Key>
+          <Property Name="ServiceOrderId" Type="Int32" Nullable="false" />
+          <Property Name="RequestedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="StartDate" Type="DateTime" Precision="3" />
+          <Property Name="EndDate" Type="DateTime" Precision="3" />
+          <Property Name="VehicleFk" Type="Int32" Nullable="false" />
+          <Property Name="ServiceOrderStatusFk" Type="Int32" Nullable="false" />
+          <Property Name="InvoiceFk" Type="Int32" />
+          <Property Name="AutomotiveTechnicianLeadFk" Type="Int32" Nullable="false" />
+          <Property Name="InvoiceId" Type="Int32" Nullable="false" />
+          <Property Name="InvoiceNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Taxes" Type="Int32" Nullable="false" />
+          <Property Name="Value" Type="Int32" Nullable="false" />
+          <Property Name="InvoicingDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="AutomotiveTechnicianLeadId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ServiceOrderHistoryId" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="InitialStatusFK" Type="Int32" />
+          <Property Name="FinalStatusFk" Type="Int32" Nullable="false" />
+          <Property Name="ServiceOrderFk" Type="Int32" Nullable="false" />
+          <Property Name="VehicleId" Type="Int32" Nullable="false" />
+          <Property Name="PlateNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LastServiceDate" Type="DateTime" Precision="3" />
+          <Property Name="VehicleModelFk" Type="Int32" Nullable="false" />
+          <Property Name="CustomerFk" Type="Int32" Nullable="false" />
+          <Property Name="VehicleModelId" Type="Int32" Nullable="false" />
+          <Property Name="Model" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="VehicleBrandFk" Type="Int32" Nullable="false" />
+          <Property Name="VehicleBrandId" Type="Int32" Nullable="false" />
+          <Property Name="Brand" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CustomerId" Type="Int32" Nullable="false" />
+          <Property Name="CustomerName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PhoneNumer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ServiceOrderCategoryId" Type="Int32" Nullable="false" />
+          <Property Name="Comments" Type="String" MaxLength="800" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CategoryFk" Type="Int32" Nullable="false" />
+          <Property Name="ServiceOrderCategoryServieOrderFk" Type="Int32" Nullable="false" />
+          <Property Name="ServiceOrderCategoryStatusFk" Type="Int32" Nullable="false" />
+          <Property Name="AutomotiveTechnicianFk" Type="Int32" />
+          <Property Name="CategoryId" Type="Int32" Nullable="false" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AutomotiveTechnicianId" Type="Int32" Nullable="false" />
+          <Property Name="TechnicianName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ServiceOrderCategoryHistoryId" Type="Int32" Nullable="false" />
+          <Property Name="ServiceOrderCategoryHistoryDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ServiceOrderCategoryHistoryInitialStatusFk" Type="Int32" />
+          <Property Name="ServiceOrderCategoryHistoryFinalStatusFk" Type="Int32" Nullable="false" />
+          <Property Name="ServiceOrderCategoryFk" Type="Int32" Nullable="false" />
+          <Property Name="OrderCategoryDetailId" Type="Int32" Nullable="false" />
+          <Property Name="OrderCategoryDetailComments" Type="String" MaxLength="800" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Findings" Type="String" MaxLength="800" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="OrderCategoryDetailStartDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="OrderCategoryDetailEndDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="OrderCategoryDetailStatusFk" Type="Int32" Nullable="false" />
+          <Property Name="OrderCategoryDetailServiceOrderCategoryFk" Type="Int32" Nullable="false" />
+          <Property Name="OrderCategoryDetailHitoryId" Type="Int32" Nullable="false" />
+          <Property Name="OrderCategoryDetailHistoryDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="OrderCategoryDetailHistoryInitialStatusFk" Type="Int32" />
+          <Property Name="OrderCategoryDetailHistoryFinalStatusFk" Type="Int32" Nullable="false" />
+          <Property Name="OrderCategoryDetailFk" Type="Int32" Nullable="false" />
+          <Property Name="PartManteinanceId" Type="Int32" Nullable="false" />
+          <Property Name="SerialNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PartManteinanceComments" Type="String" MaxLength="800" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PartManteinanceOrderCatgoryDetailFk" Type="Int32" Nullable="false" />
+          <Property Name="ParfFk" Type="Int32" Nullable="false" />
+          <Property Name="PartReplacementId" Type="Int32" Nullable="false" />
+          <Property Name="PartReplacementSerialNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PartReplacementComments" Type="String" MaxLength="800" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PartReplacementOrderCategoryDetalFk" Type="Int32" Nullable="false" />
+          <Property Name="PartFk" Type="Int32" Nullable="false" />
+          <Property Name="PartmanteinancePartId" Type="Int32" Nullable="false" />
+          <Property Name="PartmanteinancePartName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PartReplacementPartId" Type="Int32" Nullable="false" />
+          <Property Name="PartReplacementPartName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ManufacturerNameManteinance" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ManufacturerNameReplacement" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="VehicleServiceEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="VehicleServiceComplete" EntityType="Self.VehicleServiceComplete" />
+          <FunctionImport Name="uspVehicleServiceComplete" ReturnType="Collection(VehicleServiceModel.uspVehicleServiceComplete_Result)" />
+        </EntityContainer>
+        <ComplexType Name="uspVehicleServiceComplete_Result">
+          <Property Type="Int32" Name="ServiceOrderId" Nullable="false" />
+          <Property Type="DateTime" Name="RequestedDate" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="VehicleFk" Nullable="false" />
+          <Property Type="Int32" Name="ServiceOrderStatusFk" Nullable="false" />
+          <Property Type="Int32" Name="InvoiceFk" Nullable="true" />
+          <Property Type="Int32" Name="AutomotiveTechnicianLeadFk" Nullable="false" />
+          <Property Type="Int32" Name="InvoiceId" Nullable="false" />
+          <Property Type="String" Name="InvoiceNumber" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="Taxes" Nullable="false" />
+          <Property Type="Int32" Name="Value" Nullable="false" />
+          <Property Type="DateTime" Name="InvoicingDate" Nullable="false" Precision="23" />
+          <Property Type="Int32" Name="AutomotiveTechnicianLeadId" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="250" />
+          <Property Type="Int32" Name="ServiceOrderHistoryId" Nullable="false" />
+          <Property Type="DateTime" Name="Date" Nullable="false" Precision="23" />
+          <Property Type="Int32" Name="InitialStatusFK" Nullable="true" />
+          <Property Type="Int32" Name="FinalStatusFk" Nullable="false" />
+          <Property Type="Int32" Name="ServiceOrderFk" Nullable="false" />
+          <Property Type="Int32" Name="VehicleId" Nullable="false" />
+          <Property Type="String" Name="PlateNumber" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="LastServiceDate" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="VehicleModelFk" Nullable="false" />
+          <Property Type="Int32" Name="CustomerFk" Nullable="false" />
+          <Property Type="Int32" Name="VehicleModelId" Nullable="false" />
+          <Property Type="String" Name="Model" Nullable="false" MaxLength="30" />
+          <Property Type="Int32" Name="VehicleBrandFk" Nullable="false" />
+          <Property Type="Int32" Name="VehicleBrandId" Nullable="false" />
+          <Property Type="String" Name="Brand" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="CustomerId" Nullable="false" />
+          <Property Type="String" Name="CustomerName" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="Address" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="PhoneNumer" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="ServiceOrderCategoryId" Nullable="false" />
+          <Property Type="String" Name="Comments" Nullable="false" MaxLength="800" />
+          <Property Type="Int32" Name="CategoryFk" Nullable="false" />
+          <Property Type="Int32" Name="ServiceOrderCategoryServieOrderFk" Nullable="false" />
+          <Property Type="Int32" Name="ServiceOrderCategoryStatusFk" Nullable="false" />
+          <Property Type="Int32" Name="AutomotiveTechnicianFk" Nullable="true" />
+          <Property Type="Int32" Name="CategoryId" Nullable="false" />
+          <Property Type="String" Name="Category" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="AutomotiveTechnicianId" Nullable="false" />
+          <Property Type="String" Name="TechnicianName" Nullable="false" MaxLength="250" />
+          <Property Type="Int32" Name="ServiceOrderCategoryHistoryId" Nullable="false" />
+          <Property Type="DateTime" Name="ServiceOrderCategoryHistoryDate" Nullable="false" Precision="23" />
+          <Property Type="Int32" Name="ServiceOrderCategoryHistoryInitialStatusFk" Nullable="true" />
+          <Property Type="Int32" Name="ServiceOrderCategoryHistoryFinalStatusFk" Nullable="false" />
+          <Property Type="Int32" Name="ServiceOrderCategoryFk" Nullable="false" />
+          <Property Type="Int32" Name="OrderCategoryDetailId" Nullable="false" />
+          <Property Type="String" Name="OrderCategoryDetailComments" Nullable="false" MaxLength="800" />
+          <Property Type="String" Name="Findings" Nullable="false" MaxLength="800" />
+          <Property Type="DateTime" Name="OrderCategoryDetailStartDate" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="OrderCategoryDetailEndDate" Nullable="false" Precision="23" />
+          <Property Type="Int32" Name="OrderCategoryDetailStatusFk" Nullable="false" />
+          <Property Type="Int32" Name="OrderCategoryDetailServiceOrderCategoryFk" Nullable="false" />
+          <Property Type="Int32" Name="OrderCategoryDetailHitoryId" Nullable="false" />
+          <Property Type="DateTime" Name="OrderCategoryDetailHistoryDate" Nullable="false" Precision="23" />
+          <Property Type="Int32" Name="OrderCategoryDetailHistoryInitialStatusFk" Nullable="true" />
+          <Property Type="Int32" Name="OrderCategoryDetailHistoryFinalStatusFk" Nullable="false" />
+          <Property Type="Int32" Name="OrderCategoryDetailFk" Nullable="false" />
+          <Property Type="Int32" Name="PartManteinanceId" Nullable="false" />
+          <Property Type="String" Name="SerialNumber" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="PartManteinanceComments" Nullable="false" MaxLength="800" />
+          <Property Type="Int32" Name="PartManteinanceOrderCatgoryDetailFk" Nullable="false" />
+          <Property Type="Int32" Name="ParfFk" Nullable="false" />
+          <Property Type="Int32" Name="PartReplacementId" Nullable="false" />
+          <Property Type="String" Name="PartReplacementSerialNumber" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="PartReplacementComments" Nullable="false" MaxLength="800" />
+          <Property Type="Int32" Name="PartReplacementOrderCategoryDetalFk" Nullable="false" />
+          <Property Type="Int32" Name="PartFk" Nullable="false" />
+          <Property Type="Int32" Name="PartmanteinancePartId" Nullable="false" />
+          <Property Type="String" Name="PartmanteinancePartName" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="PartReplacementPartId" Nullable="false" />
+          <Property Type="String" Name="PartReplacementPartName" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="ManufacturerNameManteinance" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ManufacturerNameReplacement" Nullable="false" MaxLength="250" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="VehicleServiceModelStoreContainer" CdmEntityContainer="VehicleServiceEntities">
+          <EntitySetMapping Name="VehicleServiceComplete">
+            <EntityTypeMapping TypeName="VehicleServiceModel.VehicleServiceComplete">
+              <MappingFragment StoreEntitySet="VehicleServiceComplete">
+                <ScalarProperty Name="ServiceOrderId" ColumnName="ServiceOrderId" />
+                <ScalarProperty Name="RequestedDate" ColumnName="RequestedDate" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="VehicleFk" ColumnName="VehicleFk" />
+                <ScalarProperty Name="ServiceOrderStatusFk" ColumnName="ServiceOrderStatusFk" />
+                <ScalarProperty Name="InvoiceFk" ColumnName="InvoiceFk" />
+                <ScalarProperty Name="AutomotiveTechnicianLeadFk" ColumnName="AutomotiveTechnicianLeadFk" />
+                <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+                <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+                <ScalarProperty Name="Taxes" ColumnName="Taxes" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="InvoicingDate" ColumnName="InvoicingDate" />
+                <ScalarProperty Name="AutomotiveTechnicianLeadId" ColumnName="AutomotiveTechnicianLeadId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ServiceOrderHistoryId" ColumnName="ServiceOrderHistoryId" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="InitialStatusFK" ColumnName="InitialStatusFK" />
+                <ScalarProperty Name="FinalStatusFk" ColumnName="FinalStatusFk" />
+                <ScalarProperty Name="ServiceOrderFk" ColumnName="ServiceOrderFk" />
+                <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+                <ScalarProperty Name="PlateNumber" ColumnName="PlateNumber" />
+                <ScalarProperty Name="LastServiceDate" ColumnName="LastServiceDate" />
+                <ScalarProperty Name="VehicleModelFk" ColumnName="VehicleModelFk" />
+                <ScalarProperty Name="CustomerFk" ColumnName="CustomerFk" />
+                <ScalarProperty Name="VehicleModelId" ColumnName="VehicleModelId" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="VehicleBrandFk" ColumnName="VehicleBrandFk" />
+                <ScalarProperty Name="VehicleBrandId" ColumnName="VehicleBrandId" />
+                <ScalarProperty Name="Brand" ColumnName="Brand" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="PhoneNumer" ColumnName="PhoneNumer" />
+                <ScalarProperty Name="ServiceOrderCategoryId" ColumnName="ServiceOrderCategoryId" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="CategoryFk" ColumnName="CategoryFk" />
+                <ScalarProperty Name="ServiceOrderCategoryServieOrderFk" ColumnName="ServiceOrderCategoryServieOrderFk" />
+                <ScalarProperty Name="ServiceOrderCategoryStatusFk" ColumnName="ServiceOrderCategoryStatusFk" />
+                <ScalarProperty Name="AutomotiveTechnicianFk" ColumnName="AutomotiveTechnicianFk" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="AutomotiveTechnicianId" ColumnName="AutomotiveTechnicianId" />
+                <ScalarProperty Name="TechnicianName" ColumnName="TechnicianName" />
+                <ScalarProperty Name="ServiceOrderCategoryHistoryId" ColumnName="ServiceOrderCategoryHistoryId" />
+                <ScalarProperty Name="ServiceOrderCategoryHistoryDate" ColumnName="ServiceOrderCategoryHistoryDate" />
+                <ScalarProperty Name="ServiceOrderCategoryHistoryInitialStatusFk" ColumnName="ServiceOrderCategoryHistoryInitialStatusFk" />
+                <ScalarProperty Name="ServiceOrderCategoryHistoryFinalStatusFk" ColumnName="ServiceOrderCategoryHistoryFinalStatusFk" />
+                <ScalarProperty Name="ServiceOrderCategoryFk" ColumnName="ServiceOrderCategoryFk" />
+                <ScalarProperty Name="OrderCategoryDetailId" ColumnName="OrderCategoryDetailId" />
+                <ScalarProperty Name="OrderCategoryDetailComments" ColumnName="OrderCategoryDetailComments" />
+                <ScalarProperty Name="Findings" ColumnName="Findings" />
+                <ScalarProperty Name="OrderCategoryDetailStartDate" ColumnName="OrderCategoryDetailStartDate" />
+                <ScalarProperty Name="OrderCategoryDetailEndDate" ColumnName="OrderCategoryDetailEndDate" />
+                <ScalarProperty Name="OrderCategoryDetailStatusFk" ColumnName="OrderCategoryDetailStatusFk" />
+                <ScalarProperty Name="OrderCategoryDetailServiceOrderCategoryFk" ColumnName="OrderCategoryDetailServiceOrderCategoryFk" />
+                <ScalarProperty Name="OrderCategoryDetailHitoryId" ColumnName="OrderCategoryDetailHitoryId" />
+                <ScalarProperty Name="OrderCategoryDetailHistoryDate" ColumnName="OrderCategoryDetailHistoryDate" />
+                <ScalarProperty Name="OrderCategoryDetailHistoryInitialStatusFk" ColumnName="OrderCategoryDetailHistoryInitialStatusFk" />
+                <ScalarProperty Name="OrderCategoryDetailHistoryFinalStatusFk" ColumnName="OrderCategoryDetailHistoryFinalStatusFk" />
+                <ScalarProperty Name="OrderCategoryDetailFk" ColumnName="OrderCategoryDetailFk" />
+                <ScalarProperty Name="PartManteinanceId" ColumnName="PartManteinanceId" />
+                <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+                <ScalarProperty Name="PartManteinanceComments" ColumnName="PartManteinanceComments" />
+                <ScalarProperty Name="PartManteinanceOrderCatgoryDetailFk" ColumnName="PartManteinanceOrderCatgoryDetailFk" />
+                <ScalarProperty Name="ParfFk" ColumnName="ParfFk" />
+                <ScalarProperty Name="PartReplacementId" ColumnName="PartReplacementId" />
+                <ScalarProperty Name="PartReplacementSerialNumber" ColumnName="PartReplacementSerialNumber" />
+                <ScalarProperty Name="PartReplacementComments" ColumnName="PartReplacementComments" />
+                <ScalarProperty Name="PartReplacementOrderCategoryDetalFk" ColumnName="PartReplacementOrderCategoryDetalFk" />
+                <ScalarProperty Name="PartFk" ColumnName="PartFk" />
+                <ScalarProperty Name="PartmanteinancePartId" ColumnName="PartmanteinancePartId" />
+                <ScalarProperty Name="PartmanteinancePartName" ColumnName="PartmanteinancePartName" />
+                <ScalarProperty Name="PartReplacementPartId" ColumnName="PartReplacementPartId" />
+                <ScalarProperty Name="PartReplacementPartName" ColumnName="PartReplacementPartName" />
+                <ScalarProperty Name="ManufacturerNameManteinance" ColumnName="ManufacturerNameManteinance" />
+                <ScalarProperty Name="ManufacturerNameReplacement" ColumnName="ManufacturerNameReplacement" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="uspVehicleServiceComplete" FunctionName="VehicleServiceModel.Store.uspVehicleServiceComplete">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="VehicleServiceModel.uspVehicleServiceComplete_Result">
+                <ScalarProperty Name="ServiceOrderId" ColumnName="ServiceOrderId" />
+                <ScalarProperty Name="RequestedDate" ColumnName="RequestedDate" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="VehicleFk" ColumnName="VehicleFk" />
+                <ScalarProperty Name="ServiceOrderStatusFk" ColumnName="ServiceOrderStatusFk" />
+                <ScalarProperty Name="InvoiceFk" ColumnName="InvoiceFk" />
+                <ScalarProperty Name="AutomotiveTechnicianLeadFk" ColumnName="AutomotiveTechnicianLeadFk" />
+                <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+                <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+                <ScalarProperty Name="Taxes" ColumnName="Taxes" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="InvoicingDate" ColumnName="InvoicingDate" />
+                <ScalarProperty Name="AutomotiveTechnicianLeadId" ColumnName="AutomotiveTechnicianLeadId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ServiceOrderHistoryId" ColumnName="ServiceOrderHistoryId" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="InitialStatusFK" ColumnName="InitialStatusFK" />
+                <ScalarProperty Name="FinalStatusFk" ColumnName="FinalStatusFk" />
+                <ScalarProperty Name="ServiceOrderFk" ColumnName="ServiceOrderFk" />
+                <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+                <ScalarProperty Name="PlateNumber" ColumnName="PlateNumber" />
+                <ScalarProperty Name="LastServiceDate" ColumnName="LastServiceDate" />
+                <ScalarProperty Name="VehicleModelFk" ColumnName="VehicleModelFk" />
+                <ScalarProperty Name="CustomerFk" ColumnName="CustomerFk" />
+                <ScalarProperty Name="VehicleModelId" ColumnName="VehicleModelId" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="VehicleBrandFk" ColumnName="VehicleBrandFk" />
+                <ScalarProperty Name="VehicleBrandId" ColumnName="VehicleBrandId" />
+                <ScalarProperty Name="Brand" ColumnName="Brand" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="PhoneNumer" ColumnName="PhoneNumer" />
+                <ScalarProperty Name="ServiceOrderCategoryId" ColumnName="ServiceOrderCategoryId" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="CategoryFk" ColumnName="CategoryFk" />
+                <ScalarProperty Name="ServiceOrderCategoryServieOrderFk" ColumnName="ServiceOrderCategoryServieOrderFk" />
+                <ScalarProperty Name="ServiceOrderCategoryStatusFk" ColumnName="ServiceOrderCategoryStatusFk" />
+                <ScalarProperty Name="AutomotiveTechnicianFk" ColumnName="AutomotiveTechnicianFk" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="AutomotiveTechnicianId" ColumnName="AutomotiveTechnicianId" />
+                <ScalarProperty Name="TechnicianName" ColumnName="TechnicianName" />
+                <ScalarProperty Name="ServiceOrderCategoryHistoryId" ColumnName="ServiceOrderCategoryHistoryId" />
+                <ScalarProperty Name="ServiceOrderCategoryHistoryDate" ColumnName="ServiceOrderCategoryHistoryDate" />
+                <ScalarProperty Name="ServiceOrderCategoryHistoryInitialStatusFk" ColumnName="ServiceOrderCategoryHistoryInitialStatusFk" />
+                <ScalarProperty Name="ServiceOrderCategoryHistoryFinalStatusFk" ColumnName="ServiceOrderCategoryHistoryFinalStatusFk" />
+                <ScalarProperty Name="ServiceOrderCategoryFk" ColumnName="ServiceOrderCategoryFk" />
+                <ScalarProperty Name="OrderCategoryDetailId" ColumnName="OrderCategoryDetailId" />
+                <ScalarProperty Name="OrderCategoryDetailComments" ColumnName="OrderCategoryDetailComments" />
+                <ScalarProperty Name="Findings" ColumnName="Findings" />
+                <ScalarProperty Name="OrderCategoryDetailStartDate" ColumnName="OrderCategoryDetailStartDate" />
+                <ScalarProperty Name="OrderCategoryDetailEndDate" ColumnName="OrderCategoryDetailEndDate" />
+                <ScalarProperty Name="OrderCategoryDetailStatusFk" ColumnName="OrderCategoryDetailStatusFk" />
+                <ScalarProperty Name="OrderCategoryDetailServiceOrderCategoryFk" ColumnName="OrderCategoryDetailServiceOrderCategoryFk" />
+                <ScalarProperty Name="OrderCategoryDetailHitoryId" ColumnName="OrderCategoryDetailHitoryId" />
+                <ScalarProperty Name="OrderCategoryDetailHistoryDate" ColumnName="OrderCategoryDetailHistoryDate" />
+                <ScalarProperty Name="OrderCategoryDetailHistoryInitialStatusFk" ColumnName="OrderCategoryDetailHistoryInitialStatusFk" />
+                <ScalarProperty Name="OrderCategoryDetailHistoryFinalStatusFk" ColumnName="OrderCategoryDetailHistoryFinalStatusFk" />
+                <ScalarProperty Name="OrderCategoryDetailFk" ColumnName="OrderCategoryDetailFk" />
+                <ScalarProperty Name="PartManteinanceId" ColumnName="PartManteinanceId" />
+                <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+                <ScalarProperty Name="PartManteinanceComments" ColumnName="PartManteinanceComments" />
+                <ScalarProperty Name="PartManteinanceOrderCatgoryDetailFk" ColumnName="PartManteinanceOrderCatgoryDetailFk" />
+                <ScalarProperty Name="ParfFk" ColumnName="ParfFk" />
+                <ScalarProperty Name="PartReplacementId" ColumnName="PartReplacementId" />
+                <ScalarProperty Name="PartReplacementSerialNumber" ColumnName="PartReplacementSerialNumber" />
+                <ScalarProperty Name="PartReplacementComments" ColumnName="PartReplacementComments" />
+                <ScalarProperty Name="PartReplacementOrderCategoryDetalFk" ColumnName="PartReplacementOrderCategoryDetalFk" />
+                <ScalarProperty Name="PartFk" ColumnName="PartFk" />
+                <ScalarProperty Name="PartmanteinancePartId" ColumnName="PartmanteinancePartId" />
+                <ScalarProperty Name="PartmanteinancePartName" ColumnName="PartmanteinancePartName" />
+                <ScalarProperty Name="PartReplacementPartId" ColumnName="PartReplacementPartId" />
+                <ScalarProperty Name="PartReplacementPartName" ColumnName="PartReplacementPartName" />
+                <ScalarProperty Name="ManufacturerNameManteinance" ColumnName="ManufacturerNameManteinance" />
+                <ScalarProperty Name="ManufacturerNameReplacement" ColumnName="ManufacturerNameReplacement" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
