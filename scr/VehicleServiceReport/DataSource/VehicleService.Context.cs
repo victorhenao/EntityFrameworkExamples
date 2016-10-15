@@ -29,9 +29,9 @@ namespace VehicleServiceReport.DataSource
     
         public virtual DbSet<VehicleServiceComplete> VehicleServiceComplete { get; set; }
     
-        public virtual ObjectResult<uspVehicleServiceComplete_Result> uspVehicleServiceComplete()
+        public virtual ObjectResult<uspVehicleServiceComplete> uspVehicleServiceComplete()
         {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<uspVehicleServiceComplete_Result>("uspVehicleServiceComplete");
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<uspVehicleServiceComplete>("uspVehicleServiceComplete");
         }
     }
 }

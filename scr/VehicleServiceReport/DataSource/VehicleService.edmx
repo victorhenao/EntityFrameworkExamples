@@ -397,9 +397,9 @@ warning 6002: The table/view 'VehicleService.dbo.VehicleServiceComplete' does no
         </EntityType>
         <EntityContainer Name="VehicleServiceEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="VehicleServiceComplete" EntityType="Self.VehicleServiceComplete" />
-          <FunctionImport Name="uspVehicleServiceComplete" ReturnType="Collection(VehicleServiceModel.uspVehicleServiceComplete_Result)" />
+          <FunctionImport Name="uspVehicleServiceComplete" ReturnType="Collection(VehicleServiceModel.uspVehicleServiceComplete)" />
         </EntityContainer>
-        <ComplexType Name="uspVehicleServiceComplete_Result">
+        <ComplexType Name="uspVehicleServiceComplete">
           <Property Type="Int32" Name="ServiceOrderId" Nullable="false" />
           <Property Type="DateTime" Name="RequestedDate" Nullable="false" Precision="23" />
           <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
@@ -569,7 +569,7 @@ warning 6002: The table/view 'VehicleService.dbo.VehicleServiceComplete' does no
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="uspVehicleServiceComplete" FunctionName="VehicleServiceModel.Store.uspVehicleServiceComplete">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="VehicleServiceModel.uspVehicleServiceComplete_Result">
+              <ComplexTypeMapping TypeName="VehicleServiceModel.uspVehicleServiceComplete">
                 <ScalarProperty Name="ServiceOrderId" ColumnName="ServiceOrderId" />
                 <ScalarProperty Name="RequestedDate" ColumnName="RequestedDate" />
                 <ScalarProperty Name="StartDate" ColumnName="StartDate" />

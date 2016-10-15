@@ -11,7 +11,7 @@ namespace VehicleServiceReport.DataSource
 {
     using System;
     
-    public partial class uspVehicleServiceComplete_Result
+    public partial class uspVehicleServiceComplete
     {
         public int ServiceOrderId { get; set; }
         public System.DateTime RequestedDate { get; set; }
